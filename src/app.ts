@@ -20,8 +20,8 @@ app.use((_req, _res, next) => {
   next();
 });
 
-app.get('/', (req, res) => {
-  res.send('Hello Express!');
+app.get('/', (request, response) => {
+  response.send('Hello Express!');
 });
 
 // App.use('/data', dataRouter);
