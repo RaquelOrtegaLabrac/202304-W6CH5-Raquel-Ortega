@@ -14,4 +14,8 @@ export class DataController {
   async getAll(request: Request, response: Response) {
     response.send(await this.repo.readAll());
   }
+
+  getById(request: Request, response: Response) {
+    response.send('GetById' + request.params.id);
+  }
 }
