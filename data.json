@@ -1,10 +1,4 @@
 [
-  {
-    "id": "1",
-    "name": "react"
-  },
-  {
-    "id": "2",
-    "name": "redux"
-  }
+  { "id": "1", "name": "react" },
+  { "id": "2", "name": "redux" }
 ]
