@@ -1,5 +1,5 @@
 import http from 'http';
-import { app } from './app';
+import { app } from './app.js';
 import * as dotenv from 'dotenv';
 import createDebug from 'debug';
 const debug = createDebug('W6');

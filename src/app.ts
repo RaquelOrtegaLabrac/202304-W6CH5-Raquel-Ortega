@@ -24,4 +24,4 @@ app.get('/', (req, res) => {
   res.send('Hello Express!');
 });
 
-app.use('/data', dataRouter);
+// App.use('/data', dataRouter);

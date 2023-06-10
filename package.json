@@ -13,7 +13,7 @@
     "test:prod": "jest --watchAll --coverage --watchAll=false --passWithNoTests"
   },
   "keywords": [],
-  "author": "Alejandro Cerezo",
+  "author": "Raquel Ortega",
   "license": "ISC",
   "devDependencies": {
     "@types/cors": "^2.8.13",
