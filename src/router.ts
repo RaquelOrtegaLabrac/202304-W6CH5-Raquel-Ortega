@@ -1,5 +1,5 @@
 import { Router as createRouter } from 'express';
-import { DataController } from './controller';
+import { DataController } from './controller.js';
 
 const controller = new DataController();
 export const dataRouter = createRouter();

@@ -3,6 +3,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 import createDebug from 'debug';
 const debug = createDebug('W6:App');
+import { dataRouter } from './router.js';
 
 export const app = express();
 
@@ -24,4 +25,4 @@ app.get('/', (request, response) => {
   response.send('Hello Express!');
 });
 
-// App.use('/data', dataRouter);
+app.use('/data', dataRouter);

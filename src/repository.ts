@@ -18,4 +18,20 @@ export class DataRepo {
     const stringData = await fs.readFile(file, { encoding: 'utf-8' });
     return JSON.parse(stringData) as Subject[];
   }
+
+  async readById(id: string) {
+    const stringData = await fs.readFile(file, { encoding: 'utf-8' });
+    const subjectData = JSON.parse(stringData) as Subject[];
+    return subjectData.find((item) => item.id === id);
+  }
+
+  async addSubject(subject: Subject) {
+    const stringData = await fs.readFile(file, { encoding: 'utf-8' });
+    const subjectData = JSON.parse(stringData) as Subject[];
+    subject.id = subjectData[subjectData.length - 1].id + 1;
+    const newSubjectList = JSON.stringify([...subjectData, subject]);
+    await fs.writeFile(file, newSubjectList, {
+      encoding: 'utf-8',
+    });
+  }
 }
