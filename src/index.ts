@@ -1,4 +1,5 @@
 import http from 'http';
+import { app } from './app';
 import * as dotenv from 'dotenv';
 import createDebug from 'debug';
 const debug = createDebug('W6');
@@ -6,7 +7,7 @@ const debug = createDebug('W6');
 dotenv.config();
 const PORT = process.env.PORT || 4444;
 
-const server = http.createServer();
+const server = http.createServer(app);
 
 server.listen(PORT);
 
