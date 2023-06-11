@@ -16,11 +16,21 @@ export class DataController {
   }
 
   async getById(request: Request, response: Response) {
-    response.send(await this.repo.readById(String(request.params.id)));
+    response.send(await this.repo.readById(request.params.id));
   }
 
   async post(request: Request, response: Response) {
     await this.repo.addSubject(request.body);
     response.send('New subject added.');
+  }
+
+  async patch(request: Request, response: Response) {
+    await this.repo.update(request.params.id, request.body);
+    response.send('The subject has been updated.');
+  }
+
+  async deleteById(request: Request, response: Response) {
+    await this.repo.delete(request.params.id);
+    response.send('The subject has been removed.');
   }
 }
